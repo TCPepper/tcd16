@@ -1,0 +1,7 @@
+topic: ~askname2()
+language: enu
+
+u:(e:onStart) %askname what's your name?
+u1:({"my name is" "I'm"} _*) $name2=$1  $name2 is this correct?
+u2:(yes) cool! show me your face! $onStopped=$name2
+u2:(no) oups sorry!  ^gotoReactivate(askname)
