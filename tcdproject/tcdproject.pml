@@ -4,9 +4,14 @@
     <BehaviorDescriptions>
         <BehaviorDescription name="behavior" src="behavior_1" xar="behavior.xar" />
         <BehaviorDescription name="behavior" src="Norman" xar="behavior.xar" />
+<<<<<<< HEAD
+        <BehaviorDescription name="behavior" src="jerry-behavior" xar="behavior.xar" />
+        <BehaviorDescription name="behavior" src="quan_behaviour" xar="behavior.xar" />
+=======
         <BehaviorDescription name="behavior" src="quan_behaviour" xar="behavior.xar" />
         <BehaviorDescription name="behavior" src="yelp_behavior" xar="behavior.xar" />
         <BehaviorDescription name="behavior" src="travel" xar="behavior.xar" />
+>>>>>>> refs/remotes/origin/develop
     </BehaviorDescriptions>
     <Dialogs>
         <Dialog name="test" src="test/test.dlg" />
@@ -15,6 +20,24 @@
         <File name="swiftswords_ext" src="behavior_1/swiftswords_ext.mp3" />
         <File name="AA" src="AA.pmt" />
         <File name="BB" src="BB.pmt" />
+<<<<<<< HEAD
+        <File name="swiftswords_ext" src="jerry-behavior/swiftswords_ext.mp3" />
+        <File name="style" src="html/css/style.css" />
+        <File name="index" src="html/index.html" />
+        <File name="intro-bg" src="html/intro-bg.jpg" />
+        <File name="jquery-1.11.0.min" src="html/js/jquery-1.11.0.min.js" />
+        <File name="main" src="html/js/main.js" />
+        <File name="robotutils" src="html/js/robotutils.js" />
+        <File name="product-bg" src="html/product-bg.jpg" />
+        <File name="survey-bg" src="html/survey-bg.jpg" />
+        <File name="dbq" src="html/dbq.jpg" />
+        <File name="econ" src="html/econ.jpg" />
+        <File name="lux" src="html/lux.jpg" />
+        <File name="sk" src="html/sk.jpg" />
+        <File name="spa" src="html/spa.jpg" />
+        <File name="view" src="html/view.jpg" />
+        <File name="ty-bg" src="html/ty-bg.jpg" />
+=======
         <File name="__init__" src="httplib2/__init__.py" />
         <File name="__init__" src="httplib2/__init__.pyc" />
         <File name="cacerts" src="httplib2/cacerts.txt" />
@@ -83,6 +106,7 @@
         <File name="span" src="yelp/obj/span.pyc" />
         <File name="user" src="yelp/obj/user.py" />
         <File name="user" src="yelp/obj/user.pyc" />
+>>>>>>> refs/remotes/origin/develop
     </Resources>
     <Topics>
         <Topic name="test_enu" src="test/test_enu.top" topicName="test" language="en_US" />
