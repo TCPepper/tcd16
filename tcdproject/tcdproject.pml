@@ -11,6 +11,7 @@
         <BehaviorDescription name="behavior" src="Hotel Rep" xar="behavior.xar" />
         <BehaviorDescription name="behavior" src="test/travel_to_speaker/follow_person" xar="behavior.xar" />
         <BehaviorDescription name="behavior" src="test/travel_to_speaker/point_directions" xar="behavior.xar" />
+        <BehaviorDescription name="behavior" src="upload_picture_to_cisco_spark_behavior" xar="behavior.xar" />
     </BehaviorDescriptions>
     <Dialogs>
         <Dialog name="test" src="test/test.dlg" />
