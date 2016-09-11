@@ -23,7 +23,8 @@
 
 
 	<script>
-	var mymap = L.map('mapid').setView([37.78476, -842.38855], 13);
+	var mymap = L.map('mapid').setView([37.78476, -842.38855], 16);
+	mymap.panTo(L.latLng(37.78476, -842.38855));
 	 $(document).ready(function(e){
             RobotUtils.onService(function (ALMemory) {
                ALMemory.getData('tcd/yelpDATA').then(function(value) {

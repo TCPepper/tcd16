@@ -349,7 +349,7 @@ class MyClass(GeneratedClass):
 			"Danish" : " ^start(animations/Stand/Gestures/Hey_1) Hej ^wait(animations/Stand/Gestures/Hey_1) ",
 			"German" : " ^start(animations/Stand/Gestures/Hey_1) Hallo ^wait(animations/Stand/Gestures/Hey_1) ",
 			"Greek" : "  ",
-			"English" : " ^start(animations/Stand/Gestures/Hey_1) Thank you,  I have you staying in our corner suite, here is your key. Is there anything else you need? Also I\'d recommend Rare Blue since you love steak so much. ^wait(animations/Stand/Gestures/Hey_1) ",
+			"English" : " ^start(animations/Stand/Gestures/Hey_1) Thank you,  I have you staying in our corner suite, here is your key. By the way, I checked your Panasonic profile, and have suggested a few steak restaurants on the screen. ^wait(animations/Stand/Gestures/Hey_1) ",
 			"Spanish" : " ^start(animations/Stand/Gestures/Hey_1) Hola ^wait(animations/Stand/Gestures/Hey_1) ",
 			"Finnish" : " ^start(animations/Stand/Gestures/Hey_1) Hei ^wait(animations/Stand/Gestures/Hey_1) ",
 			"French" : " ^start(animations/Stand/Gestures/Hey_1) Bonjour ^wait(animations/Stand/Gestures/Hey_1) ",
@@ -389,7 +389,7 @@ class MyClass(GeneratedClass):
                                                         <![CDATA[]]>
 </greek>
                                                     <english>
-                                                        <![CDATA[^start(animations/Stand/Gestures/Hey_1) Thank you,  I have you staying in our corner suite, here is your key. Is there anything else you need? Also I'd recommend Rare Blue since you love steak so much. ^wait(animations/Stand/Gestures/Hey_1)]]>
+                                                        <![CDATA[^start(animations/Stand/Gestures/Hey_1) Thank you,  I have you staying in our corner suite, here is your key. By the way, I checked your Panasonic profile, and have suggested a few steak restaurants on the screen. ^wait(animations/Stand/Gestures/Hey_1)]]>
 </english>
                                                     <spanish>
                                                         <![CDATA[^start(animations/Stand/Gestures/Hey_1) Hola ^wait(animations/Stand/Gestures/Hey_1)]]>
@@ -717,108 +717,6 @@ class MyClass(GeneratedClass):
                             <Parameter name="Timeout (s)" inherits_from_parent="0" content_type="2" value="1" default_value="1" min="0" max="5000" tooltip="Duration the box waits before stimulating the output." id="5" />
                             <Parameter name="Trigger timerOutput if cancelled" inherits_from_parent="0" content_type="0" value="0" default_value="1" tooltip="If the box is currently waiting and cancelled, output will be stimulated." id="6" />
                         </Box>
-                        <Box name="Look At" id="9" localization="-1" tooltip="This box makes the robot look at a desired position." x="255" y="626">
-                            <bitmap>media/images/box/movement/move_head.png</bitmap>
-                            <script language="4">
-                                <content>
-                                    <![CDATA[import time
-
-class MyClass(GeneratedClass):
-    def __init__(self):
-        GeneratedClass.__init__(self)
-        self.tracker = ALProxy( "ALTracker" )
-
-        self.x = 0.0
-        self.y = 0.0
-        self.z = 0.0
-
-        self.maxSpeed = 0.5
-
-        self.useWholeBody = False
-        self.frame = 0 #FRAME TORSO
-
-    def onLoad(self):
-        self.BIND_PYTHON(self.getName(), "setParameter")
-
-    def onUnload(self):
-        pass
-
-    def onInput_onStart(self):
-        self.x = self.getParameter("X (m)")
-        self.y = self.getParameter("Y (m)")
-        self.z = self.getParameter("Z (m)")
-
-        self.maxSpeed = self.getParameter("Speed (%)") / 100.0
-        self.useWholeBody = self.getParameter("WholeBody")
-
-        frameStr = self.getParameter("Frame")
-        if frameStr == "Torso":
-            self.frame = 0
-        elif frameStr == "World":
-            self.frame = 1
-        elif frameStr == "Robot":
-            self.frame = 2
-
-        self.tracker.lookAt([self.x, self.y, self.z], self.frame, self.maxSpeed, self.useWholeBody)
-        self.onStopped()
-
-    def onInput_onStop(self):
-        self.onUnload()
-        pass
-
-    def setParameter(self, parameterName, newValue):
-        GeneratedClass.setParameter(self, parameterName, newValue)
-
-        if (parameterName == "X (m)"):
-            self.x = newValue
-            self.tracker.lookAt([self.x, self.y, self.z], self.frame, self.maxSpeed, self.useWholeBody)
-            self.onStopped()
-            return
-
-        if (parameterName == "Y (m)"):
-            self.y = newValue
-            self.tracker.lookAt([self.x, self.y, self.z], self.frame, self.maxSpeed, self.useWholeBody)
-            self.onStopped()
-            return
-
-        if (parameterName == "Z (m)"):
-            self.z = newValue
-            self.tracker.lookAt([self.x, self.y, self.z], self.frame, self.maxSpeed, self.useWholeBody)
-            self.onStopped()
-            return
-
-        if (parameterName == "Speed (%)"):
-            self.maxSpeed = newValue / 100.0
-            return
-
-        if (parameterName == "WholeBody"):
-            self.useWholeBody = newValue
-            return
-
-        if (parameterName == "Frame"):
-            if(newValue == "Torso"):
-                self.frame = 0
-            elif newValue == "World":
-                self.frame = 1
-            elif newValue == "Robot":
-                self.frame = 2]]>
-</content>
-                            </script>
-                            <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" />
-                            <Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Box behavior starts when a signal is received on this input." id="2" />
-                            <Input name="onStop" type="1" type_size="1" nature="3" inner="0" tooltip="Box behavior stops when a signal is received on this input." id="3" />
-                            <Output name="onStopped" type="1" type_size="1" nature="1" inner="0" tooltip="Signal sent when box behavior is finished." id="4" />
-                            <Parameter name="X (m)" inherits_from_parent="0" content_type="2" value="1" default_value="1" min="0.001" max="10" tooltip="X coordinate of the target to look at." id="5" />
-                            <Parameter name="Y (m)" inherits_from_parent="0" content_type="2" value="0" default_value="0" min="-10" max="10" tooltip="Y coordinate of the target to look at." id="6" />
-                            <Parameter name="Z (m)" inherits_from_parent="0" content_type="2" value="0" default_value="0" min="-10" max="10" tooltip="Z coordinate of the target to look at." id="7" />
-                            <Parameter name="Speed (%)" inherits_from_parent="0" content_type="1" value="50" default_value="50" min="1" max="100" tooltip="Speed to move the head towards the desired position." id="8" />
-                            <Parameter name="WholeBody" inherits_from_parent="0" content_type="0" value="0" default_value="0" tooltip="Use whole body constraints" id="9" />
-                            <Parameter name="Frame" inherits_from_parent="0" content_type="3" value="Torso" default_value="Torso" custom_choice="0" tooltip="Select the frame of target." id="10">
-                                <Choice value="Torso" />
-                                <Choice value="World" />
-                                <Choice value="Robot" />
-                            </Parameter>
-                        </Box>
                         <Box name="Log" id="7" localization="8" tooltip="Prompt the message in the debug window. You can set a prefix and a priority&#x0A;for the message in the parameters." x="826" y="646">
                             <bitmap>media/images/box/print.png</bitmap>
                             <script language="4">
@@ -1070,7 +968,7 @@ class MyClass(GeneratedClass):
                             <Output name="onSuccess" type="1" type_size="1" nature="1" inner="0" tooltip="Signal sent when box behavior is finished successfully." id="3" />
                             <Output name="onFailure" type="1" type_size="1" nature="1" inner="0" tooltip="Signal sent when box behavior is finished unsuccessfully." id="4" />
                         </Box>
-                        <Box name="yelp_helper" id="12" localization="8" tooltip="" x="1002" y="183">
+                        <Box name="yelp_helper" id="12" localization="8" tooltip="" x="70" y="625">
                             <bitmap>media/images/box/box-python-script.png</bitmap>
                             <script language="4">
                                 <content>
@@ -1599,22 +1497,19 @@ class MyClass(GeneratedClass):
                         <Link inputowner="1" indexofinput="2" outputowner="6" indexofoutput="6" />
                         <Link inputowner="6" indexofinput="3" outputowner="6" indexofoutput="6" />
                         <Link inputowner="6" indexofinput="2" outputowner="8" indexofoutput="4" />
-                        <Link inputowner="9" indexofinput="3" outputowner="9" indexofoutput="4" />
                         <Link inputowner="3" indexofinput="2" outputowner="4" indexofoutput="4" />
                         <Link inputowner="7" indexofinput="2" outputowner="4" indexofoutput="4" />
                         <Link inputowner="10" indexofinput="2" outputowner="1" indexofoutput="4" />
                         <Link inputowner="3" indexofinput="2" outputowner="10" indexofoutput="4" />
                         <Link inputowner="8" indexofinput="2" outputowner="0" indexofoutput="2" />
                         <Link inputowner="2" indexofinput="2" outputowner="0" indexofoutput="2" />
-                        <Link inputowner="2" indexofinput="2" outputowner="10" indexofoutput="4" />
                         <Link inputowner="5" indexofinput="2" outputowner="6" indexofoutput="6" />
                         <Link inputowner="13" indexofinput="2" outputowner="1" indexofoutput="4" />
-                        <Link inputowner="12" indexofinput="2" outputowner="3" indexofoutput="4" />
                         <Link inputowner="11" indexofinput="2" outputowner="3" indexofoutput="4" />
                         <Link inputowner="14" indexofinput="2" outputowner="0" indexofoutput="2" />
                         <Link inputowner="15" indexofinput="2" outputowner="0" indexofoutput="2" />
                         <Link inputowner="18" indexofinput="2" outputowner="0" indexofoutput="2" />
-                        <Link inputowner="9" indexofinput="2" outputowner="18" indexofoutput="4" />
+                        <Link inputowner="12" indexofinput="2" outputowner="0" indexofoutput="2" />
                     </Diagram>
                 </BehaviorKeyframe>
             </BehaviorLayer>
