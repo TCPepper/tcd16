@@ -410,7 +410,7 @@ class MyClass(GeneratedClass):
                             <Output name="failure" type="1" type_size="1" nature="1" inner="0" tooltip="Stimulated if the trajectory was stopped to avoid collisions." id="5" />
                             <Parameter name="Planar Move Trajectory" inherits_from_parent="0" content_type="4" value="/../BB.pmt" default_value="" tooltip="" id="6" />
                         </Box>
-                        <Box name="Show App" id="2" localization="8" tooltip="Loads the application on the tablet, if it exists, and displays the webview.&#x0A;&#x0A;V1.0.0&#x0A;" x="634" y="19">
+                        <Box name="Show App" id="2" localization="8" tooltip="Loads the application on the tablet, if it exists, and displays the webview.&#x0A;&#x0A;V1.0.0&#x0A;" x="728" y="80">
                             <bitmap>media/images/box/root.png</bitmap>
                             <script language="4">
                                 <content>

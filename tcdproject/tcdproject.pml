@@ -2,13 +2,13 @@
 <Package name="tcdproject" format_version="4">
     <Manifest src="manifest.xml" />
     <BehaviorDescriptions>
-        <BehaviorDescription name="behavior" src="behavior_1" xar="behavior.xar" />
+        <BehaviorDescription name="behavior" src="jerrys_behavior" xar="behavior.xar" />
     </BehaviorDescriptions>
     <Dialogs>
         <Dialog name="test" src="test/test.dlg" />
     </Dialogs>
     <Resources>
-        <File name="swiftswords_ext" src="behavior_1/swiftswords_ext.mp3" />
+        <File name="swiftswords_ext" src="jerrys_behavior/swiftswords_ext.mp3" />
         <File name="AA" src="AA.pmt" />
         <File name="BB" src="BB.pmt" />
         <File name="style" src="html/css/style.css" />
