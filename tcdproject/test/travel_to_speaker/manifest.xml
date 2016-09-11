@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<package uuid="travel_to_speaker-1319a6" version="0.0.0">
+<package version="0.0.0" uuid="travel_to_speaker-1319a6">
  <names>
   <name lang="en_US">travel_to_speaker</name>
  </names>
@@ -13,9 +13,10 @@
   <behaviorContent path="follow_person">
    <userRequestable/>
    <nature>interactive</nature>
-   <triggerSentences/>
-   <loadingResponses/>
-   <autonomous/>
+   <permissions/>
+  </behaviorContent>
+  <behaviorContent path="point_directions">
+   <nature>interactive</nature>
    <permissions/>
   </behaviorContent>
  </contents>
