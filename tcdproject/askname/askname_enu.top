@@ -1,11 +1,7 @@
 topic: ~askname()
 language: enu
 
-# Defining extra concepts out of words or group of words
-#concept:(hello) [hello hi hey "good morning" greetings]
-
-# Catching inputs and triggering outputs
-#u:(e:onStart) $onStopped=1
-
-# Replying to speech
-#u:(~hello) ~hello
+u:(e:onStart) %askname what's your name?
+u1:({"my name is" "I'm"} _*) $name=$1 I understood $name is this correct?
+u2:(yes) cool! show me your face! $onStopped=$name
+u2:(no) oups sorry!  ^gotoReactivate(askname)
