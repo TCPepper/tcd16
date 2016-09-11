@@ -18,5 +18,9 @@
    <autonomous/>
    <permissions/>
   </behaviorContent>
+  <behaviorContent path="Norman">
+   <nature>interactive</nature>
+   <permissions/>
+  </behaviorContent>
  </contents>
 </package>
