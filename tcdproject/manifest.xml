@@ -22,5 +22,13 @@
    <nature>interactive</nature>
    <permissions/>
   </behaviorContent>
+  <behaviorContent path="yelp_behavior">
+   <nature>solitary</nature>
+   <permissions/>
+  </behaviorContent>
+  <behaviorContent path="travel">
+   <nature>interactive</nature>
+   <permissions/>
+  </behaviorContent>
  </contents>
 </package>
