@@ -110,6 +110,7 @@
         <File name="user" src="yelp_behavior/lib/yelp/obj/user.pyc" />
         <File name="manifest" src="test/travel_to_speaker/manifest.xml" />
         <File name="travel_to_speaker" src="test/travel_to_speaker/travel_to_speaker.pml" />
+        <File name="index2" src="html/index2.html" />
     </Resources>
     <Topics>
         <Topic name="test_enu" src="test/test_enu.top" topicName="test" language="en_US" />
