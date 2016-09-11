@@ -10,7 +10,7 @@
   <language>en_US</language>
  </descriptionLanguages>
  <contents>
-  <behaviorContent path="jerrys_behavior">
+  <behaviorContent path="behavior_1">
    <userRequestable/>
    <nature>interactive</nature>
    <triggerSentences/>
