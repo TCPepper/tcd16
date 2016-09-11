@@ -10,6 +10,7 @@
         <BehaviorDescription name="behavior" src="jerry-behavior" xar="behavior.xar" />
         <BehaviorDescription name="behavior" src="Hotel Rep" xar="behavior.xar" />
         <BehaviorDescription name="behavior" src="test/travel_to_speaker/follow_person" xar="behavior.xar" />
+        <BehaviorDescription name="behavior" src="test/travel_to_speaker/point_directions" xar="behavior.xar" />
     </BehaviorDescriptions>
     <Dialogs>
         <Dialog name="test" src="test/test.dlg" />
@@ -18,6 +19,7 @@
         <Dialog name="askname2" src="askname2/askname2.dlg" />
         <Dialog name="hello" src="hello/hello.dlg" />
         <Dialog name="comehere" src="test/travel_to_speaker/comehere/comehere.dlg" />
+        <Dialog name="ExampleDialog" src="test/travel_to_speaker/point_directions/ExampleDialog/ExampleDialog.dlg" />
     </Dialogs>
     <Resources>
         <File name="swiftswords_ext" src="behavior_1/swiftswords_ext.mp3" />
@@ -119,6 +121,7 @@
         <Topic name="askname2_enu" src="askname2/askname2_enu.top" topicName="askname2" language="en_US" />
         <Topic name="hello_enu" src="hello/hello_enu.top" topicName="hello" language="en_US" />
         <Topic name="comehere_enu" src="test/travel_to_speaker/comehere/comehere_enu.top" topicName="comehere" language="en_US" />
+        <Topic name="ExampleDialog_enu" src="test/travel_to_speaker/point_directions/ExampleDialog/ExampleDialog_enu.top" topicName="ExampleDialog" language="en_US" />
     </Topics>
     <IgnoredPaths>
         <Path src=".metadata" />
