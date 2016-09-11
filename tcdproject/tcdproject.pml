@@ -12,6 +12,9 @@
         <BehaviorDescription name="behavior" src="test/travel_to_speaker/follow_person" xar="behavior.xar" />
         <BehaviorDescription name="behavior" src="test/travel_to_speaker/point_directions" xar="behavior.xar" />
         <BehaviorDescription name="behavior" src="upload_picture_to_cisco_spark_behavior" xar="behavior.xar" />
+        <BehaviorDescription name="behavior" src="conversation_behavior" xar="behavior.xar" />
+        <BehaviorDescription name="behavior" src="take_picture_behavior" xar="behavior.xar" />
+        <BehaviorDescription name="behavior" src="watson_conversation_behavior" xar="behavior.xar" />
     </BehaviorDescriptions>
     <Dialogs>
         <Dialog name="test" src="test/test.dlg" />
@@ -21,6 +24,7 @@
         <Dialog name="hello" src="hello/hello.dlg" />
         <Dialog name="comehere" src="test/travel_to_speaker/comehere/comehere.dlg" />
         <Dialog name="ExampleDialog" src="test/travel_to_speaker/point_directions/ExampleDialog/ExampleDialog.dlg" />
+        <Dialog name="ExampleDialog" src="conversation_behavior/ExampleDialog/ExampleDialog.dlg" />
     </Dialogs>
     <Resources>
         <File name="swiftswords_ext" src="behavior_1/swiftswords_ext.mp3" />
@@ -123,6 +127,7 @@
         <Topic name="hello_enu" src="hello/hello_enu.top" topicName="hello" language="en_US" />
         <Topic name="comehere_enu" src="test/travel_to_speaker/comehere/comehere_enu.top" topicName="comehere" language="en_US" />
         <Topic name="ExampleDialog_enu" src="test/travel_to_speaker/point_directions/ExampleDialog/ExampleDialog_enu.top" topicName="ExampleDialog" language="en_US" />
+        <Topic name="ExampleDialog_enu" src="conversation_behavior/ExampleDialog/ExampleDialog_enu.top" topicName="ExampleDialog" language="en_US" />
     </Topics>
     <IgnoredPaths>
         <Path src=".metadata" />
