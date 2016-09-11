@@ -141,6 +141,19 @@ body{
     font-size: 30px;
 }
 
+.submitButton{
+    background-color: #009CDE;
+    margin: 20px;
+    font-size: 40px;
+    width: 400px;
+    margin-left: 430px;
+    border: 5px solid white;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    font-style: italic;
+}
+
 .thankyouPageTitle{
     text-align: center;
     color: white;
