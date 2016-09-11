@@ -1,0 +1,4 @@
+topic: ~comehere()
+language: enu
+
+u:(["come here" "pepper" "[follow "come with"] {me}"]) ok! $onStopped=1
