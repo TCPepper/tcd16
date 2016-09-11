@@ -3,6 +3,7 @@
     <Manifest src="manifest.xml" />
     <BehaviorDescriptions>
         <BehaviorDescription name="behavior" src="behavior_1" xar="behavior.xar" />
+        <BehaviorDescription name="behavior" src="Norman" xar="behavior.xar" />
     </BehaviorDescriptions>
     <Dialogs>
         <Dialog name="test" src="test/test.dlg" />
@@ -15,5 +16,7 @@
     <Topics>
         <Topic name="test_enu" src="test/test_enu.top" topicName="test" language="en_US" />
     </Topics>
-    <IgnoredPaths />
+    <IgnoredPaths>
+        <Path src=".metadata" />
+    </IgnoredPaths>
 </Package>
