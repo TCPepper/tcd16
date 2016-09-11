@@ -29,3 +29,25 @@ var application = function(){
         $("#noservice").show();
     });
 };
+
+function toPage(p){
+	switch(p) {
+		case "intro":
+			$("#intro").css("display", "inline");
+			$("#survey").css("display", "none");
+			$("#product").css("display", "none");
+			break;
+		case "survey":
+			$("#intro").css("display", "none");
+			$("#survey").css("display", "inline");
+			$("#product").css("display", "none");
+			break;
+		case "product":
+			$("#intro").css("display", "none");
+			$("#survey").css("display", "none");
+			$("#product").css("display", "inline");
+			break;
+		default:
+			alert("to unknown page");
+	}	
+}

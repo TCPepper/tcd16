@@ -21,6 +21,14 @@
         <File name="jquery-1.11.0.min" src="jerry-behavior/html/js/jquery-1.11.0.min.js" />
         <File name="main" src="jerry-behavior/html/js/main.js" />
         <File name="robotutils" src="jerry-behavior/html/js/robotutils.js" />
+        <File name="product-bg" src="jerry-behavior/html/product-bg.jpg" />
+        <File name="survey-bg" src="jerry-behavior/html/survey-bg.jpg" />
+        <File name="dbq" src="jerry-behavior/html/dbq.jpg" />
+        <File name="econ" src="jerry-behavior/html/econ.jpg" />
+        <File name="lux" src="jerry-behavior/html/lux.jpg" />
+        <File name="sk" src="jerry-behavior/html/sk.jpg" />
+        <File name="spa" src="jerry-behavior/html/spa.jpg" />
+        <File name="view" src="jerry-behavior/html/view.jpg" />
     </Resources>
     <Topics>
         <Topic name="test_enu" src="test/test_enu.top" topicName="test" language="en_US" />
