@@ -38,16 +38,36 @@ function toPage(p){
 			$("#intro").css("display", "inline");
 			$("#survey").css("display", "none");
 			$("#product").css("display", "none");
+			$("#checkout").css("display", "none");
+			$("#thankyou").css("display", "none");
 			break;
 		case "survey":
 			$("#intro").css("display", "none");
 			$("#survey").css("display", "inline");
 			$("#product").css("display", "none");
+			$("#checkout").css("display", "none");
+			$("#thankyou").css("display", "none");
 			break;
 		case "product":
 			$("#intro").css("display", "none");
 			$("#survey").css("display", "none");
 			$("#product").css("display", "inline");
+			$("#checkout").css("display", "none");
+			$("#thankyou").css("display", "none");
+			break;
+		case "checkout":
+			$("#intro").css("display", "none");
+			$("#survey").css("display", "none");
+			$("#product").css("display", "none");
+			$("#checkout").css("display", "inline");
+			$("#thankyou").css("display", "none");
+			break;
+		case "thankyou":
+			$("#intro").css("display", "none");
+			$("#survey").css("display", "none");
+			$("#product").css("display", "none");
+			$("#checkout").css("display", "none");
+			$("#thankyou").css("display", "inline");
 			break;
 		default:
 			alert("to unknown page");

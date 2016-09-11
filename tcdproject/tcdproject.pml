@@ -29,6 +29,7 @@
         <File name="sk" src="html/sk.jpg" />
         <File name="spa" src="html/spa.jpg" />
         <File name="view" src="html/view.jpg" />
+        <File name="ty-bg" src="html/ty-bg.jpg" />
     </Resources>
     <Topics>
         <Topic name="test_enu" src="test/test_enu.top" topicName="test" language="en_US" />
