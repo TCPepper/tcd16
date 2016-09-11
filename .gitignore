@@ -1,5 +1,5 @@
-*.pyc
-*.pml
+**/*.pyc
+**/*.pml
 
 # Folder view configuration files
 .DS_Store

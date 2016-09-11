@@ -1,0 +1,4 @@
+topic: ~ExampleDialog()
+language: enu
+
+u:(_*) you said $1 $conversationEvent=$1

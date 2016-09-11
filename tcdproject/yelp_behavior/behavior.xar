@@ -15,7 +15,7 @@
             <BehaviorLayer name="behavior_layer1">
                 <BehaviorKeyframe name="keyframe1" index="1">
                     <Diagram>
-                        <Box name="Show App" id="2" localization="8" tooltip="Loads the application on the tablet, if it exists, and displays the webview.&#x0A;&#x0A;V1.0.0&#x0A;" x="419" y="260">
+                        <Box name="Show App" id="2" localization="8" tooltip="Loads the application on the tablet, if it exists, and displays the webview.&#x0A;&#x0A;V1.0.0&#x0A;" x="402" y="255">
                             <bitmap>media/images/box/root.png</bitmap>
                             <script language="4">
                                 <content>
@@ -75,7 +75,7 @@ class MyClass(GeneratedClass):
                             <Output name="onSuccess" type="1" type_size="1" nature="1" inner="0" tooltip="Signal sent when box behavior is finished successfully." id="3" />
                             <Output name="onFailure" type="1" type_size="1" nature="1" inner="0" tooltip="Signal sent when box behavior is finished unsuccessfully." id="4" />
                         </Box>
-                        <Box name="yelp_helper" id="1" localization="8" tooltip="" x="222" y="258">
+                        <Box name="yelp_helper" id="1" localization="8" tooltip="" x="232" y="189">
                             <bitmap>media/images/box/box-python-script.png</bitmap>
                             <script language="4">
                                 <content>
