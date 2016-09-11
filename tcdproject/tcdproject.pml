@@ -6,6 +6,7 @@
         <BehaviorDescription name="behavior" src="Norman" xar="behavior.xar" />
         <BehaviorDescription name="behavior" src="quan_behaviour" xar="behavior.xar" />
         <BehaviorDescription name="behavior" src="yelp_behavior" xar="behavior.xar" />
+        <BehaviorDescription name="behavior" src="travel" xar="behavior.xar" />
     </BehaviorDescriptions>
     <Dialogs>
         <Dialog name="test" src="test/test.dlg" />

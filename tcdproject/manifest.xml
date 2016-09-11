@@ -26,5 +26,9 @@
    <nature>solitary</nature>
    <permissions/>
   </behaviorContent>
+  <behaviorContent path="travel">
+   <nature>interactive</nature>
+   <permissions/>
+  </behaviorContent>
  </contents>
 </package>
