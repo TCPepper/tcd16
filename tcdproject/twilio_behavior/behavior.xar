@@ -19,7 +19,40 @@
                             <bitmap>media/images/box/box-python-script.png</bitmap>
                             <script language="4">
                                 <content>
-                                    <![CDATA[]]>
+                                    <![CDATA[import os, sys
+import json
+
+class MyClass(GeneratedClass):
+    def __init__(self):
+        GeneratedClass.__init__(self)
+
+    def onLoad(self):
+        python_path = os.path.join(self.behaviorAbsolutePath(), 'lib')
+        if python_path not in sys.path:
+            sys.path.insert(0, python_path)
+
+        # Find these values at https://twilio.com/user/account
+        account_sid = "ACe2a3f5537b36b56e2c70eab1ffad56f8"
+        auth_token = "0889c7ccf860f0feb145fae706bf762d"
+        client = TwilioRestClient(account_sid, auth_token)
+
+        message = client.messages.create(to="+14155338563", from_="+15555555555",
+                                             body="Hello there!")
+
+
+        pass
+
+    def onUnload(self):
+        #put clean-up code here
+        pass
+
+    def onInput_onStart(self):
+        #self.onStopped() #activate the output of the box
+        pass
+
+    def onInput_onStop(self):
+        self.onUnload() #it is recommended to reuse the clean-up as the box is stopped
+        self.onStopped() #activate the output of the box]]>
 </content>
                             </script>
                             <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" />

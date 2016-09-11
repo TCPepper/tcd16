@@ -13,9 +13,6 @@
   <behaviorContent path="behavior_1">
    <userRequestable/>
    <nature>interactive</nature>
-   <triggerSentences/>
-   <loadingResponses/>
-   <autonomous/>
    <permissions/>
   </behaviorContent>
   <behaviorContent path="Norman">
@@ -24,16 +21,10 @@
   </behaviorContent>
   <behaviorContent path="yelp_behavior">
    <nature>solitary</nature>
-   <triggerSentences/>
-   <loadingResponses/>
-   <autonomous/>
    <permissions/>
   </behaviorContent>
   <behaviorContent path="travel">
    <nature>interactive</nature>
-   <triggerSentences/>
-   <loadingResponses/>
-   <autonomous/>
    <permissions/>
   </behaviorContent>
   <behaviorContent path="upload_picture_to_cisco_spark_behavior">
@@ -46,16 +37,10 @@
   </behaviorContent>
   <behaviorContent path="conversation_behavior">
    <nature>interactive</nature>
-   <triggerSentences/>
-   <loadingResponses/>
-   <autonomous/>
    <permissions/>
   </behaviorContent>
   <behaviorContent path="watson_conversation_behavior">
    <nature>interactive</nature>
-   <triggerSentences/>
-   <loadingResponses/>
-   <autonomous/>
    <permissions/>
   </behaviorContent>
   <behaviorContent path="twilio_behavior">
