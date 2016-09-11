@@ -12,6 +12,7 @@
     <Dialogs>
         <Dialog name="test" src="test/test.dlg" />
         <Dialog name="askname" src="askname/askname.dlg" />
+        <Dialog name="ExampleDialog" src="travel/ExampleDialog/ExampleDialog.dlg" />
     </Dialogs>
     <Resources>
         <File name="swiftswords_ext" src="behavior_1/swiftswords_ext.mp3" />
@@ -106,6 +107,7 @@
     <Topics>
         <Topic name="test_enu" src="test/test_enu.top" topicName="test" language="en_US" />
         <Topic name="askname_enu" src="askname/askname_enu.top" topicName="askname" language="en_US" />
+        <Topic name="ExampleDialog_enu" src="travel/ExampleDialog/ExampleDialog_enu.top" topicName="ExampleDialog" language="en_US" />
     </Topics>
     <IgnoredPaths>
         <Path src=".metadata" />
