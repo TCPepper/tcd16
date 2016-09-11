@@ -15,6 +15,7 @@
         <BehaviorDescription name="behavior" src="conversation_behavior" xar="behavior.xar" />
         <BehaviorDescription name="behavior" src="take_picture_behavior" xar="behavior.xar" />
         <BehaviorDescription name="behavior" src="watson_conversation_behavior" xar="behavior.xar" />
+        <BehaviorDescription name="behavior" src="twilio_behavior" xar="behavior.xar" />
     </BehaviorDescriptions>
     <Dialogs>
         <Dialog name="test" src="test/test.dlg" />

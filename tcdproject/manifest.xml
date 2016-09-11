@@ -46,9 +46,19 @@
   </behaviorContent>
   <behaviorContent path="conversation_behavior">
    <nature>interactive</nature>
+   <triggerSentences/>
+   <loadingResponses/>
+   <autonomous/>
    <permissions/>
   </behaviorContent>
   <behaviorContent path="watson_conversation_behavior">
+   <nature>interactive</nature>
+   <triggerSentences/>
+   <loadingResponses/>
+   <autonomous/>
+   <permissions/>
+  </behaviorContent>
+  <behaviorContent path="twilio_behavior">
    <nature>interactive</nature>
    <permissions/>
   </behaviorContent>
