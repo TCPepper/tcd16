@@ -9,12 +9,15 @@
         <BehaviorDescription name="behavior" src="travel" xar="behavior.xar" />
         <BehaviorDescription name="behavior" src="jerry-behavior" xar="behavior.xar" />
         <BehaviorDescription name="behavior" src="Hotel Rep" xar="behavior.xar" />
+        <BehaviorDescription name="behavior" src="test/travel_to_speaker/follow_person" xar="behavior.xar" />
     </BehaviorDescriptions>
     <Dialogs>
         <Dialog name="test" src="test/test.dlg" />
         <Dialog name="askname" src="askname/askname.dlg" />
         <Dialog name="ExampleDialog" src="travel/ExampleDialog/ExampleDialog.dlg" />
         <Dialog name="askname2" src="askname2/askname2.dlg" />
+        <Dialog name="hello" src="hello/hello.dlg" />
+        <Dialog name="comehere" src="test/travel_to_speaker/comehere/comehere.dlg" />
     </Dialogs>
     <Resources>
         <File name="swiftswords_ext" src="behavior_1/swiftswords_ext.mp3" />
@@ -105,14 +108,19 @@
         <File name="span" src="yelp_behavior/lib/yelp/obj/span.pyc" />
         <File name="user" src="yelp_behavior/lib/yelp/obj/user.py" />
         <File name="user" src="yelp_behavior/lib/yelp/obj/user.pyc" />
+        <File name="manifest" src="test/travel_to_speaker/manifest.xml" />
+        <File name="travel_to_speaker" src="test/travel_to_speaker/travel_to_speaker.pml" />
     </Resources>
     <Topics>
         <Topic name="test_enu" src="test/test_enu.top" topicName="test" language="en_US" />
         <Topic name="askname_enu" src="askname/askname_enu.top" topicName="askname" language="en_US" />
         <Topic name="ExampleDialog_enu" src="travel/ExampleDialog/ExampleDialog_enu.top" topicName="ExampleDialog" language="en_US" />
         <Topic name="askname2_enu" src="askname2/askname2_enu.top" topicName="askname2" language="en_US" />
+        <Topic name="hello_enu" src="hello/hello_enu.top" topicName="hello" language="en_US" />
+        <Topic name="comehere_enu" src="test/travel_to_speaker/comehere/comehere_enu.top" topicName="comehere" language="en_US" />
     </Topics>
     <IgnoredPaths>
         <Path src=".metadata" />
+        <Path src="test/travel_to_speaker/.metadata" />
     </IgnoredPaths>
 </Package>
