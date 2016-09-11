@@ -81,19 +81,15 @@ class MyClass(GeneratedClass):
                                 <content>
                                     <![CDATA[import os, sys
 import json
-from yelp.client import Client
-from yelp.oauth1_authenticator import Oauth1Authenticator
 
 class MyClass(GeneratedClass):
     def __init__(self):
         GeneratedClass.__init__(self)
-        python_path = return os.path.join(self.behaviorAbsolutePath(), 'yelp')
-        if python_path not in sys.path:
-            sys.path.append(python_path)
 
     def onLoad(self):
-        #put initialization code here
-        pass
+        python_path = os.path.join(self.behaviorAbsolutePath(), 'lib')
+        if python_path not in sys.path:
+            sys.path.insert(0, python_path)
 
     def onUnload(self):
         #put clean-up code here
@@ -102,7 +98,7 @@ class MyClass(GeneratedClass):
     def onInput_onStart(self):
         #self.onStopped() #activate the output of the box
 
-        self.data = getYelpData()
+        self.data = self.getYelpData()
         self.mem = ALProxy("ALMemory")
         self.mem.raiseEvent("tcd/yelpDATA", self.data)
         pass
@@ -111,7 +107,12 @@ class MyClass(GeneratedClass):
         self.onUnload() #it is recommended to reuse the clean-up as the box is stopped
         self.onStopped() #activate the output of the box
 
-    def getYelpData():
+
+    def getYelpData(self):
+        import oauth2
+        from yelp.client import Client
+        from yelp.oauth1_authenticator import Oauth1Authenticator
+
         auth = Oauth1Authenticator(
             consumer_key='kmP38ua5dJie23qk-aTWig',
             consumer_secret='nJT-tUW-GCxJndhDJm6qQQLvciM',
@@ -163,6 +164,8 @@ class MyClass(GeneratedClass):
                             <Input name="onStop" type="1" type_size="1" nature="3" inner="0" tooltip="Box behavior stops when a signal is received on this input." id="3" />
                             <Output name="onStopped" type="1" type_size="1" nature="1" inner="0" tooltip="Signal sent when box behavior is finished." id="4" />
                         </Box>
+                        <Link inputowner="1" indexofinput="2" outputowner="0" indexofoutput="2" />
+                        <Link inputowner="0" indexofinput="4" outputowner="1" indexofoutput="4" />
                     </Diagram>
                 </BehaviorKeyframe>
             </BehaviorLayer>
