@@ -4,7 +4,10 @@
 	<title>Leaflet Quick Start Guide Example</title>
 	<meta charset="utf-8" />
 
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport"
+          content="initial-scale = 1.333,
+          minimum-scale = 1.333,
+          maximum-scale = 1.333" />
 
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/leaflet.css" />
 	
@@ -12,9 +15,11 @@
 <body>
 
 	<div id="mapid" style="width:1700px; height:1100px"></div>
+	<a href="index.html">book with me</a>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/leaflet.js"></script>
 	<script src="https://www.mapquestapi.com/sdk/leaflet/v2.s/mq-map.js?key=UShjaMayAC4UkuBJ5nu5rqFuraxzEOQU"></script>
-        <script src="https://www.mapquestapi.com/sdk/leaflet/v2.s/mq-routing.js?key=UShjaMayAC4UkuBJ5nu5rqFuraxzEOQU"></script>
+	<script src="https://www.mapquestapi.com/sdk/leaflet/v2.s/mq-routing.js?key=UShjaMayAC4UkuBJ5nu5rqFuraxzEOQU"></script>
+	<script src="https://www.mapquestapi.com/sdk/leaflet/v2.2/mq-traffic.js?key=UShjaMayAC4UkuBJ5nu5rqFuraxzEOQU"></script>
   	 <!-- qimessaging & jquery stuff -->
    	 <script src="js/jquery-1.11.0.min.js"></script>
    	 <script src="js/robotutils.js"></script>
@@ -23,8 +28,11 @@
 
 
 	<script>
-	var mymap = L.map('mapid').setView([37.78476, -842.38855], 16);
-	mymap.panTo(L.latLng(37.78476, -842.38855));
+	var mymap = L.map('mapid', {
+    layers: MQ.mapLayer(),
+    center: [ 37.7756988, -122.3935296 ],
+    zoom: 16}).setView([37.7756988, -122.3935296], 16);
+	mymap.panTo(L.latLng(37.7756988, -122.3935296));
 	 $(document).ready(function(e){
             RobotUtils.onService(function (ALMemory) {
                ALMemory.getData('tcd/yelpDATA').then(function(value) {
@@ -41,6 +49,24 @@
 		} )
 		});
 		})
+		
+	var dir;
+
+	dir = MQ.routing.directions();
+
+	dir.route({
+	  locations: [
+		'24 Willie Mays Plaza, San Francisco, CA',
+		'600 The Embarcadero, San Francisco, CA'
+	  ]
+	});
+
+	mymap.addLayer(MQ.routing.routeLayer({
+	  directions: dir,
+	  fitBounds: true
+	}));
+
+	MQ.trafficLayer().addTo(mymap);
                // log or display bla ...
 				
 	//	var dir = MQ.routing.directions();
