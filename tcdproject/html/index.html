@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- needed to scale tablet display -->
+    <meta name="viewport"
+          content="initial-scale = 1.333,
+          minimum-scale = 1.333,
+          maximum-scale = 1.333" />
+    <!-- application css -->
+    <link media="screen" href="css/style.css" rel="stylesheet" type="text/css">
+
+</head>
+<body class="unselectable">
+    <div class="tabletsized" id="intro" style="display:inline" onclick="toPage('survey')">
+		<div class="indexPageTitle">
+			Welcome!!
+		</div>
+		<div class="indexPageDescription">
+			Save your time and book with me.
+		</div>
+		<!--
+		<div>
+			or
+		</div>
+		<div class="indexPageDescription">
+			let me help you 
+		</div>
+		<!--
+        <div id="buttons" class="centered" style="display:none">
+            <button class="levelbutton" data-level="0">zero</button>
+            <button class="levelbutton" data-level="1">one</button>
+            <button class="levelbutton" data-level="2">two</button>
+            <button class="levelbutton" data-level="3">three</button>
+        </div>
+		-->
+        <div id="noservice" class="centered" style="display:none">
+            Service ALMyService not found :(
+        </div>
+    </div>
+	
+    <div class="tabletsized" id="survey" style="display:none" onclick="toPage('product')">
+		<div class="surveyPageTitle">
+			Please choose a style that best suits you
+		</div>
+		<div class="surveyLeft">
+			<div class="surveyBlock">
+				<div class="surveyTitle">Luxury</div>
+				<img class="surveyImage" src="lux.jpg">
+			</div>
+			<div class="surveyBlock">
+				<div class="surveyTitle">Spacious</div>
+				<img class="surveyImage" src="spa.jpg">
+			</div>
+		</div>
+		<div class="surveyRight">
+			<div class="surveyBlock">
+				<div class="surveyTitle">Good View</div>
+				<img class="surveyImage" src="view.jpg">
+			</div>
+			<div class="surveyBlock">
+				<div class="surveyTitle">Economy</div>
+				<img class="surveyImage" src="econ.jpg">
+			</div>
+		</div>
+    </div>
+	
+    <div class="tabletsized" id="product" style="display:none" onclick="toPage('intro')">
+		<div class="productPageTitle">
+			Choose from one of the options
+		</div>
+		<div class="product">
+			<img src="dbq.jpg" class="productImage">
+			<div class="description">
+				Room#1257 - double queen - $250
+			</div>
+		</div>
+		<div class="product">
+			<img src="dbq.jpg" class="productImage">
+			<div class="description">
+				Room#557 - double queen - $150
+			</div>
+		</div>
+		<div class="product">
+			<img src="sk.jpg" class="productImage">
+			<div class="description">
+				Room#707 - single king - $200
+			</div>
+		</div>
+    </div>
+	
+    <!-- qimessaging & jquery stuff -->
+    <script src="js/jquery-1.11.0.min.js"></script>
+    <script src="js/robotutils.js"></script>
+    <script src="js/main.js"></script>
+    <!-- application script call -->
+</body>
+</html>

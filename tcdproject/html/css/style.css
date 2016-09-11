@@ -1,0 +1,156 @@
+* {
+-webkit-tap-highlight-color: rgba(0, 0, 0, 0); 
+}
+
+body{
+  margin: 0px;
+  background: white;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.levelbutton {
+  border-radius: 25px;
+  display: inline-block;
+  width: 250px;
+  height: 100px;
+  background-color: blue;
+  color: white;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 35px;
+  font-style: normal;
+  font-weight: bold;
+  line-height: 50px;
+}
+
+.levelbutton.clicked {
+  background-color: grey;
+}
+
+.levelbutton.clicked.highlighted {
+  background-color: darkblue;
+}
+
+.tabletsized {
+  width: 1280px;
+  height: 800px;
+  position: absolute;
+}
+
+#exit {
+  font-size: 100px;
+  position: absolute;
+  top: 0px;
+  right: 15px;
+}
+
+
+/*========================================================*/
+
+.indexPageTitle{
+	color: white;
+	margin: 50px 0 0 50px;
+	font-size: 80px;
+	font-family: arial;
+}
+
+.indexPageDescription{
+	color: white;
+	margin: 10px 0 0 70px;
+	font-size: 30px;
+	font-family: arial;
+}
+
+.surveyPageTitle{
+    text-align: center;
+    color: white;
+    margin: 15px 0 15px 0;
+    font-size: 30px;
+    font-family: arial;
+}
+
+.surveyLeft{
+    float: left;
+    width: 25%;
+    margin-left: 5%;
+}
+
+.surveyRight{
+	float: right;
+	width: 25%;
+	margin-right: 20%;
+}
+
+.surveyBlock{
+    float: left;
+    width: 500px;
+    height: 350px;
+    background: rgba(0,0,0,0.8);
+	margin-bottom: 15px;
+}
+
+.surveyImage{
+    float: left;
+    width: 400px;
+    height: 275px;
+    margin: 10px 0 0 50px;
+}
+
+.surveyTitle{
+    text-align: center;
+    margin: 10px 0 0 0;
+	color: white;
+}
+
+.productPageTitle{
+    text-align: center;
+    color: white;
+    margin: 15px 0 15px 0;
+    font-size: 30px;
+    font-family: arial;
+}
+
+.product{
+    float: left;
+    width: 1230px;
+    height: 200px;
+    background: rgba(0,0,0,0.8);
+    margin-bottom: 15px;
+    margin-left: 20px;
+}
+
+.productImage{
+    float: left;
+    width: 300px;
+    height: 175px;
+    margin: 10px 0 0 50px;
+}
+
+.description{
+    color: white;
+    margin: 50px;
+    text-align: center;
+    font-size: 30px;
+}
+
+#intro{
+	background-image: url("../intro-bg.jpg");
+}
+
+#survey{
+	background-image: url("../survey-bg.jpg");
+}
+
+#product{
+	background-image: url("../product-bg.jpg");
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
