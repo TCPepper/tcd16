@@ -15,7 +15,7 @@
             <BehaviorLayer name="behavior_layer1">
                 <BehaviorKeyframe name="keyframe1" index="1">
                     <Diagram>
-                        <Box name="Say" id="3" localization="8" tooltip="Say some text. Note that you must open the box to enter the text." x="431" y="280">
+                        <Box name="Say" id="3" localization="8" tooltip="Say some text. Note that you must open the box to enter the text." x="514" y="326">
                             <bitmap>media/images/box/interaction/say.png</bitmap>
                             <script language="4">
                                 <content>
@@ -223,7 +223,7 @@ class MyClass(GeneratedClass):
                             </Timeline>
                             <Resource name="Speech" type="Lock" timeout="0" />
                         </Box>
-                        <Box name="AA" id="1" localization="8" tooltip="Move along a trajectory given by an attached .pmt file.&#x0A;&#x0A;V1.0.0&#x0A;" x="204" y="294">
+                        <Box name="AA" id="1" localization="8" tooltip="Move along a trajectory given by an attached .pmt file.&#x0A;&#x0A;V1.0.0&#x0A;" x="247" y="264">
                             <bitmap>media/images/box/movement/walk_forward.png</bitmap>
                             <script language="4">
                                 <content>
@@ -274,7 +274,7 @@ class MyClass(GeneratedClass):
                             <Output name="failure" type="1" type_size="1" nature="1" inner="0" tooltip="Stimulated if the trajectory was stopped to avoid collisions." id="5" />
                             <Parameter name="Planar Move Trajectory" inherits_from_parent="0" content_type="4" value="/../AA.pmt" default_value="" tooltip="" id="6" />
                         </Box>
-                        <Box name="Move To (1)" id="4" localization="8" tooltip="Make the robot move to a configured point relative to its current location." x="244" y="491">
+                        <Box name="Move To (1)" id="4" localization="8" tooltip="Make the robot move to a configured point relative to its current location." x="233" y="437">
                             <bitmap>media/images/box/movement/walk_forward.png</bitmap>
                             <script language="4">
                                 <content>
@@ -333,7 +333,7 @@ class MyClass(GeneratedClass):
                             <Parameter name="Arms movement enabled" inherits_from_parent="0" content_type="0" value="1" default_value="1" tooltip="Enables natural motion of the arms." id="9" />
                             <Resource name="Legs" type="Lock" timeout="0" />
                         </Box>
-                        <Box name="test" id="5" localization="8" tooltip="" x="468" y="465">
+                        <Box name="test" id="5" localization="8" tooltip="" x="460" y="453">
                             <bitmap>media/images/box/box-python-script.png</bitmap>
                             <script language="4">
                                 <content>
@@ -345,7 +345,7 @@ class MyClass(GeneratedClass):
                             <Input name="onStop" type="1" type_size="1" nature="3" inner="0" tooltip="Box behavior stops when a signal is received on this input." id="3" />
                             <Output name="onStopped" type="1" type_size="1" nature="1" inner="0" tooltip="Signal sent when box behavior is finished." id="4" />
                         </Box>
-                        <Box name="test" id="6" localization="8" tooltip="" x="350" y="104">
+                        <Box name="test" id="6" localization="8" tooltip="" x="267" y="63">
                             <dialogFile>../test/test.dlg</dialogFile>
                             <bitmap>media/images/box/box-dialog.png</bitmap>
                             <script language="4">
@@ -359,7 +359,7 @@ class MyClass(GeneratedClass):
                             <Output name="onStopped" type="1" type_size="1" nature="1" inner="0" tooltip="Signal sent when box behavior is finished." id="4" />
                             <Output name="output1" type="1" type_size="1" nature="2" inner="0" tooltip="" id="5" />
                         </Box>
-                        <Box name="Move Along" id="8" localization="8" tooltip="Move along a trajectory given by an attached .pmt file.&#x0A;&#x0A;V1.0.0&#x0A;" x="543" y="125">
+                        <Box name="Move Along" id="8" localization="8" tooltip="Move along a trajectory given by an attached .pmt file.&#x0A;&#x0A;V1.0.0&#x0A;" x="510" y="160">
                             <bitmap>media/images/box/movement/walk_forward.png</bitmap>
                             <script language="4">
                                 <content>
